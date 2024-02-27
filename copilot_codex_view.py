@@ -25,7 +25,7 @@ class ViewCopilotCodex(contentviews.View):
         **unknown_metadata,
     ) -> contentviews.TViewResult:
 
-        pprint.pprint(locals())
+        # pprint.pprint(locals())
 
         if isinstance(http_message, http.Response):
             # Sample JSONL data as a multi-line string for demonstration.

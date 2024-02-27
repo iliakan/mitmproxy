@@ -172,7 +172,7 @@ const Message = React.memo(function Message({
     return (
         <section className={part}>
             <FirstLine flow={flow} />
-            {/* <Headers flow={flow} message={message} /> */}
+            <Headers flow={flow} message={message} />
             <hr />
             <HttpMessage key={flow.id + part} flow={flow} message={message} />
             <Trailers flow={flow} message={message} />

@@ -1136,5 +1136,11 @@ span.CodeMirror-selectedtext { background: none; }
 .wireguard-config > * {
   margin: 0;
 }
+.kv-editor.headers {
+  display: none;
+}
+header > div {
+  display: none;
+}
 
 /*# sourceMappingURL=app.css.map */

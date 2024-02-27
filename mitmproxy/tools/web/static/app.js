@@ -49338,6 +49338,16 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
     })));
   }
   __name(ResponseLine, "ResponseLine");
+  function Headers({ flow, message }) {
+    const dispatch = useAppDispatch();
+    const part = flow.request === message ? "request" : "response";
+    return /* @__PURE__ */ React19.createElement(KeyValueListEditor, {
+      className: "headers",
+      data: message.headers,
+      onChange: (headers) => dispatch(update2(flow, { [part]: { headers } }))
+    });
+  }
+  __name(Headers, "Headers");
   function Trailers({ flow, message }) {
     const dispatch = useAppDispatch();
     const part = flow.request === message ? "request" : "response";
@@ -49361,6 +49371,9 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
       className: part
     }, /* @__PURE__ */ React19.createElement(FirstLine, {
       flow
+    }), /* @__PURE__ */ React19.createElement(Headers, {
+      flow,
+      message
     }), /* @__PURE__ */ React19.createElement("hr", null), /* @__PURE__ */ React19.createElement(HttpMessage, {
       key: flow.id + part,
       flow,

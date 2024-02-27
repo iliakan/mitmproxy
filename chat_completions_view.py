@@ -58,7 +58,7 @@ class ViewChatCopletions(contentviews.View):
             for json_line in json_lines:
                 json_data = json.loads(json_line)
                 # print("HERE JSON DATA")
-                pprint.pprint(json_data)
+                # pprint.pprint(json_data)
                 # print("...HERE JSON DATA")
                 choices = json_data["choices"]
                 if (len(choices) > 0):
